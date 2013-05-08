@@ -9,7 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
-        <jboss.version>7.1.3.Final</jboss.version>
+        <jboss.version>7.1.1.Final</jboss.version>
         <dir.jboss>${project.build.directory}/dependency/jboss-as-${jboss.version}</dir.jboss>
     </properties>
 
