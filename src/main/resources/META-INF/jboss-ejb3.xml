@@ -1,0 +1,79 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<jboss:ejb-jar xmlns:jboss="http://www.jboss.com/xml/ns/javaee"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee/schema/jboss-ejb3-2_0.xsd http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
+	version="3.1" impl-version="2.0">
+
+    <jboss:enterprise-beans>
+
+        <session>
+            <ejb-name>LookupViaPortableAliasMappedName</ejb-name>
+
+            <resource-ref>
+                <res-ref-name>LookupViaPortableAliasMappedName</res-ref-name>
+                <mapped-name>java:/queue1</mapped-name>
+                <lookup-name>java:/queue1</lookup-name>
+            </resource-ref>
+
+            <resource-ref>
+                <res-ref-name>java:comp/env/LookupViaPortableAliasMappedName</res-ref-name>
+                <mapped-name>java:/queue1</mapped-name>
+                <lookup-name>java:/queue1</lookup-name>
+            </resource-ref>
+
+        </session>
+
+        <session>
+            <ejb-name>LookupViaPortableAliasName</ejb-name>
+
+            <resource-ref>
+                <res-ref-name>LookupViaPortableAliasName</res-ref-name>
+                <mapped-name>java:/queue1</mapped-name>
+                <lookup-name>java:/queue1</lookup-name>
+            </resource-ref>
+
+            <resource-ref>
+                <res-ref-name>java:comp/env/LookupViaPortableAliasName</res-ref-name>
+                <mapped-name>java:/queue1</mapped-name>
+                <lookup-name>java:/queue1</lookup-name>
+            </resource-ref>
+
+        </session>
+
+        <session>
+            <ejb-name>LookupViaAliasName</ejb-name>
+
+            <resource-ref>
+                <res-ref-name>LookupViaAliasName</res-ref-name>
+                <mapped-name>java:/queue1</mapped-name>
+                <lookup-name>java:/queue1</lookup-name>
+            </resource-ref>
+
+            <resource-ref>
+                <res-ref-name>java:comp/env/LookupViaAliasName</res-ref-name>
+                <mapped-name>java:/queue1</mapped-name>
+                <lookup-name>java:/queue1</lookup-name>
+            </resource-ref>
+
+        </session>
+
+        <session>
+            <ejb-name>LookupViaAliasMappedName</ejb-name>
+
+            <resource-ref>
+                <res-ref-name>LookupViaAliasMappedName</res-ref-name>
+                <mapped-name>java:/queue1</mapped-name>
+                <lookup-name>java:/queue1</lookup-name>
+            </resource-ref>
+
+            <resource-ref>
+                <res-ref-name>java:comp/env/LookupViaAliasMappedName</res-ref-name>
+                <mapped-name>java:/queue1</mapped-name>
+                <lookup-name>java:/queue1</lookup-name>
+            </resource-ref>
+
+        </session>
+
+	</jboss:enterprise-beans>
+
+</jboss:ejb-jar>
