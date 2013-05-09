@@ -11,24 +11,17 @@ import javax.ejb.EJB;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
-public class LookupViaAliasNameTest
-{
-   @EJB
-   private LookupViaAliasName service;
+public class LookupViaAliasNameTest {
+	@EJB
+	private LookupViaAliasName service;
 
-   @Deployment
-   public static JavaArchive createDeployment()
-   {
-       JavaArchive javaArchive = ShrinkWrap.create(JavaArchive.class)
-               .addAsResource("META-INF/jboss-ejb3.xml")
-               .addClass(LookupViaAliasName.class);
+	@Deployment
+	public static JavaArchive createDeployment() {
+		return DeploymentArchive.ARCHIVE;
+	}
 
-       return javaArchive;
-   }
-
-   @Test
-   public void canLookupViaAliasName()
-   {
-      assertNotNull(service.getQueue());
-   }
+	@Test
+	public void canLookupViaAliasName() {
+		assertNotNull(service.getQueue());
+	}
 }
