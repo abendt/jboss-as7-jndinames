@@ -6,8 +6,9 @@
 
     <!-- https://docs.jboss.org/author/display/ARQ/JBoss+AS+7.0+-+Managed -->
 
+<!-- 
     <defaultProtocol type="Servlet 3.0"/>
-
+ -->
     <container qualifier="jbossas-7-managed" default="true">
         <configuration>
             <property name="jbossHome">${dir.jboss}</property>
@@ -21,5 +22,5 @@
 
         </configuration>
     </container>
-
+ 
 </arquillian>
