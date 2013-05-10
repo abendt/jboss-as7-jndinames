@@ -22,10 +22,7 @@ public class QueuesAreAvailableViaJndiTest {
 
     @Deployment
     public static JavaArchive createDeployment() {
-        JavaArchive javaArchive = ShrinkWrap.create(JavaArchive.class)
-                .addAsResource("META-INF/beans.xml");
-
-        return javaArchive;
+    	return DeploymentArchive.ARCHIVE;
     }
 
     private Context context;
@@ -40,8 +37,9 @@ public class QueuesAreAvailableViaJndiTest {
 
         lookup("java:/queue1");
 
-        // laut Doku sollte das hier funktionieren?
-        lookup("java:jboss/queue1");
+        // laut Doku sollte das hier funktionieren? 
+        // ???  
+        //lookup("java:jboss/queue1");
     }
 
 

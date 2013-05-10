@@ -12,23 +12,17 @@ import javax.ejb.EJB;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(Arquillian.class)
-public class LookupViaMappedNameTest
-{
-   @EJB
-   private LookupViaMappedName service;
+public class LookupViaMappedNameTest {
+	@EJB
+	private LookupViaMappedName service;
 
-   @Deployment
-   public static JavaArchive createDeployment()
-   {
-       JavaArchive javaArchive = ShrinkWrap.create(JavaArchive.class)
-               .addClass(LookupViaMappedName.class);
+	@Deployment
+	public static JavaArchive createDeployment() {
+		return DeploymentArchive.ARCHIVE;
+	}
 
-       return javaArchive;
-   }
-
-   @Test
-   public void canLookupViaMappedName()
-   {
-      assertNotNull(service.getQueue());
-   }
+	@Test
+	public void canLookupViaMappedName() {
+		assertNotNull(service.getQueue());
+	}
 }
